@@ -1,0 +1,21 @@
+name: XLD_Dictionary Branch job
+
+on:
+  push:
+    branches:
+      - XLD_Dictionary
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: List the files
+      run: ls -lrt
+    - name: Sleep for 2 min
+      run: sleep 120
