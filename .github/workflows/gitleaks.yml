@@ -23,3 +23,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }} # Only required for Organizations, not personal accounts.
           GITLEAKS_NOTIFY_USER_LIST: "@ashokmnr"
+      - name: list file
+        run: |
+          ls -lrt
